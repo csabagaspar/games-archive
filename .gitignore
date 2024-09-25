@@ -1,4 +1,3 @@
-node_modules
 *.AppImage
 *.zip
 *.iso
@@ -7,8 +6,12 @@ node_modules
 *.bin
 *.cue
 *.exe
-roms/
+*.7z
+*.pdf
+*.txt
 
+roms/
+node_modules
 
 #ppsspp
 emulators/ppsspp/files
