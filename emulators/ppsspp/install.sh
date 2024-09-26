@@ -22,4 +22,4 @@ mv $PPSSPP_CONFIG_DIR/SYSTEM/ppsspp.$SYSTEM.ini $PPSSPP_CONFIG_DIR/SYSTEM/ppsspp
 
 #textures setup
 mkdir -p $PPSSPP_CONFIG_DIR
-ln -s `readlink -f .files/TEXTURES` $PPSSPP_CONFIG_DIR/TEXTURES
+ln -s `readlink -f ./files/TEXTURES` $PPSSPP_CONFIG_DIR/TEXTURES
