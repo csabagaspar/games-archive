@@ -8,6 +8,7 @@ script:
   variables:
     EXE: devilutionx-linux-x86_64.appimage
   files:
+    - appimage: "N/A: Please select the appimage file!"
     - zipfile: "N/A: Please select the ZIP file!"
   game:
     exe: $GAMEDIR/$EXE
@@ -15,6 +16,9 @@ script:
     prefix: $GAMEDIR
 
   installer:
+    - copy:
+        src: $appimage
+        dst: $GAMEDIR
     - extract:
         description: Extracting...
         file: zipfile
