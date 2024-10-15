@@ -1,4 +1,3 @@
-
 #es-de
 frontends/es-de/symlinks/downloaded_media
 frontends/es-de/symlinks/gamelists
@@ -9,14 +8,10 @@ frontends/retroarch/symlinks
 #ppsspp
 emulators/ppsspp/symlinks
 
-
-
 #roms
 !roms/lutris
 systeminfo.txt
 systems.txt
-
-
 
 #common files
 bin
@@ -31,3 +26,4 @@ node_modules
 *.exe
 *.7z
 *.pdf
+*.nsp

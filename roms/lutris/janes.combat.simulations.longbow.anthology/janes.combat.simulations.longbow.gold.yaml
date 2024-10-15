@@ -1,0 +1,42 @@
+name: Jane's Combat Simulations - Longbow Anthology
+game_slug: janes-longbow-anthology
+slug: installer_identifier
+version: installer
+runner: wine
+script:
+  variables:
+    EXE1: Lbwin.exe
+    EXE2: lb2.exe
+  files:
+    - isozip: "N/A: Please select the ISO ZIP file"
+  game:
+    exe: $GAMEDIR/drive_c/JANES/LBA/Longbow/$EXE1
+    working_dir: $GAMEDIR/drive_c/JANES/LBGOLD
+    prefix: $GAMEDIR
+    launch_configs:
+      - exe: $GAMEDIR/drive_c/JANES/LBA/Longbow/$EXE1
+        name: Longbow
+      - exe: $GAMEDIR/drive_c/JANES/LBA/Longbow2/$EXE2
+        name: Longbow 2
+
+  installer:
+    - extract:
+        file: isozip
+        dst: $GAMEDIR
+    - task:
+        name: create_prefix
+        description: Creating Wine prefix...
+        prefix: $GAMEDIR
+    - insert-disc:
+        description: Please insert CD-ROM and press "autodetect"
+        requires: setup.exe
+    - task:
+        description: Installing...
+        executable: $DISC/setup.exe
+        name: wineexec
+  wine:
+    dxvk: true
+    esync: false
+    dgvoodoo2: true
+    overrides:
+      ddraw: native

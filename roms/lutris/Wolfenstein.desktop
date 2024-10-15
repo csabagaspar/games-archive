@@ -1,0 +1,7 @@
+
+[Desktop Entry]
+Type=Application
+Name=Wolfenstein
+Icon=lutris_wolfenstein
+Exec=env LUTRIS_SKIP_INIT=1 flatpak run net.lutris.Lutris lutris:rungame/wolfenstein
+Categories=Game

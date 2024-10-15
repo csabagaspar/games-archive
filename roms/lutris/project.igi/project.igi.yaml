@@ -1,0 +1,38 @@
+name: Project I.G.I
+game_slug: project-igi
+slug: installer_identifier
+version: installer
+runner: wine
+script:
+  variables:
+    FOLDER: igi
+    EXE: IGI.exe
+  files:
+    - zip: "N/A: Please select the ZIP file"
+  game:
+    exe: $GAMEDIR/drive_c/$FOLDER/$EXE
+    working_dir: $GAMEDIR/drive_c/$FOLDER
+    prefix: $GAMEDIR
+
+  installer:
+    - extract:
+        description: Extracting...
+        file: zip
+        dst: $GAMEDIR/drive_c/$FOLDER
+    - task:
+        arch: win32
+        name: create_prefix
+        description: Creating Wine prefix...
+        install_mono: false
+    - task:
+        arch: win32
+        name: winetricks
+        description: Setting environment to Windows 98
+        app: win98
+        silent: true
+  wine:
+    dxvk: true
+    esync: false
+    dgvoodoo2: true
+    overrides:
+      ddraw: native

@@ -6,7 +6,6 @@ CURRENT_ABSOLUTE_DIR=$(
 )
 source $CURRENT_ABSOLUTE_DIR/../../vars.env
 
-
 #apps copy
 mkdir -p $APPS_DIR
 cp $CURRENT_ABSOLUTE_DIR/files/ppsspp.sh $APPS_DIR

@@ -37,13 +37,10 @@ mv $RA_CONFIG_DIR/retroarch.$SYSTEM.cfg $RA_CONFIG_DIR/retroarch.cfg
 #retroarch-core-options.cfg
 cp $CURRENT_ABSOLUTE_DIR/configs/retroarch-core-options.cfg $RA_CONFIG_DIR
 
-
-
 #saves and states
 #TODO do not save?
 ln -s $CURRENT_ABSOLUTE_DIR/symlinks/saves $RA_CONFIG_DIR/saves
 ln -s $CURRENT_ABSOLUTE_DIR/symlinks/states $RA_CONFIG_DIR/states
-
 
 #overlays
 #TODO download

@@ -1,0 +1,28 @@
+name: Wolfenstein
+game_slug: wolfenstein
+slug: installer_identifier
+version: installer
+runner: wine
+script:
+  variables:
+    FOLDER: wolfenstein
+    EXE: Wolf2.exe
+  files:
+    - zipfile: "N/A: Please select the ZIP file!"
+  game:
+    exe: $GAMEDIR/drive_c/$FOLDER/SP/$EXE
+    working_dir: $GAMEDIR/drive_c/$FOLDER/SP
+    prefix: $GAMEDIR
+
+  installer:
+    - extract:
+        description: Extracting...
+        file: zipfile
+        format: zip
+        dst: $GAMEDIR/drive_c/$FOLDER/
+  wine:
+    dxvk: true
+    esync: false
+    dgvoodoo2: true
+    overrides:
+      ddraw: native

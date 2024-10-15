@@ -5,7 +5,6 @@ CURRENT_ABSOLUTE_DIR=$(
 )
 source $CURRENT_ABSOLUTE_DIR/../../../../vars.env
 
-
 rm $APPS_DIR/scummvm_custom.sh
 rm $RA_SYSTEM_DIR/scummvm.ini
 rm $RA_CORES_DIR/scummvm_libretro.so
