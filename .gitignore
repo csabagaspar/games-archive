@@ -14,7 +14,7 @@ systeminfo.txt
 systems.txt
 
 #common files
-bin
+download_cache
 node_modules
 *.AppImage
 *.zip
