@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<!-- This is the ES-DE find rules configuration file for Linux -->
+<ruleList>
+    <emulator name="YUZU">
+        <rule type="staticpath">
+            <entry>~/apps/yuzu*.AppImage</entry>
+        </rule>
+    </emulator>
+    <emulator name="SCUMMVM_CUSTOM">
+        <rule type="staticpath">
+            <entry>~/apps/scummvm_custom*.sh</entry>
+        </rule>
+    </emulator>
+</ruleList>
