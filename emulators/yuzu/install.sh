@@ -5,14 +5,16 @@ CURRENT_ABSOLUTE_DIR=$(
   pwd -P
 )
 source $CURRENT_ABSOLUTE_DIR/../../vars.env
-source DOWNLOAD_CACHE=$CURRENT_ABSOLUTE_DIR/../../download_cache
+DOWNLOAD_CACHE=$CURRENT_ABSOLUTE_DIR/../../download_cache
+
 
 #Copy image
 mkdir -p $APPS_DIR
 cp $DOWNLOAD_CACHE/$YUZU_APP_NAME $APPS_DIR
 chmod a+x $APPS_DIR/$YUZU_APP_NAME
 
-cp $CURRENT_ABSOLUTE_DIR/files/yuzu.sh $APPS_DIR
+#yuzu.sh
+cp $CURRENT_ABSOLUTE_DIR/configs/yuzu.sh $APPS_DIR
 
 #~/.local/share/yuzu
 mkdir -p $HOME/.local/share/yuzu/keys

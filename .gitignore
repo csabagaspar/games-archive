@@ -1,17 +1,7 @@
-#es-de
-frontends/es-de/symlinks/downloaded_media
-frontends/es-de/symlinks/gamelists
-
-#ra
-frontends/retroarch/symlinks
-
-#ppsspp
-emulators/ppsspp/symlinks
 
 #roms
 !roms/lutris
-systeminfo.txt
-systems.txt
+
 
 #common files
 download_cache
@@ -27,3 +17,4 @@ node_modules
 *.7z
 *.pdf
 *.nsp
+*.txt

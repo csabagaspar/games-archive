@@ -6,50 +6,42 @@ CURRENT_ABSOLUTE_DIR=$(
 )
 source $CURRENT_ABSOLUTE_DIR/../../vars.env
 
+DOWNLOAD_CACHE=$CURRENT_ABSOLUTE_DIR/../../download_cache
+
 #install
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install --user flathub org.libretro.RetroArch
 flatpak update --user org.libretro.RetroArch
 
-cp $CURRENT_ABSOLUTE_DIR/files/ra.sh $APPS_DIR
+#dirs
+mkdir -p $RA_CONFIG_DIR
+mkdir -p $RA_CORES_DIR
+mkdir -p $RA_SYSTEM_DIR
 
-#CORES
-mkdir -p "$RA_CORES_DIR"
-## download cores
-for CORE in "${RA_CORES_TO_DOWNLOAD[@]}"; do
-  curl "$RA_CORES_DOWNLOAD_URL/$CORE.so.zip" --output "$RA_CORES_DIR/${CORE}.zip"
-done
+#ra.sh
+cp $CURRENT_ABSOLUTE_DIR/configs/ra.sh $APPS_DIR
 
-## extract cores
-for entry in "$RA_CORES_DIR"/*.zip; do
-  unzip -q -o "$entry" -d "$RA_CORES_DIR"
-done
-
-for entry in "$RA_CORES_DIR"/*.zip; do
-  rm -f "$entry"
-done
+#scummvm_custom.sh
+cp $CURRENT_ABSOLUTE_DIR/configs/scummvm_custom.sh $APPS_DIR
 
 #retroarch.cfg
-mkdir -p $RA_CONFIG_DIR
 cp $CURRENT_ABSOLUTE_DIR/configs/retroarch.$SYSTEM.cfg $RA_CONFIG_DIR
 mv $RA_CONFIG_DIR/retroarch.$SYSTEM.cfg $RA_CONFIG_DIR/retroarch.cfg
 
 #retroarch-core-options.cfg
 cp $CURRENT_ABSOLUTE_DIR/configs/retroarch-core-options.cfg $RA_CONFIG_DIR
 
-#saves and states
-#TODO do not save?
-ln -s $CURRENT_ABSOLUTE_DIR/symlinks/saves $RA_CONFIG_DIR/saves
-ln -s $CURRENT_ABSOLUTE_DIR/symlinks/states $RA_CONFIG_DIR/states
+#scummvm.ini
+cp $CURRENT_ABSOLUTE_DIR/configs/scummvm.$SYSTEM.ini $RA_SYSTEM_DIR
+mv $RA_SYSTEM_DIR/scummvm.$SYSTEM.ini $RA_SYSTEM_DIR/scummvm.ini
 
-#overlays
-#TODO download
-ln -s $CURRENT_ABSOLUTE_DIR/symlinks/overlays $RA_CONFIG_DIR/overlays
+#bios
+for SYSTEM in "${RA_SYSTEMS[@]}"; do
+  unzip -q -o "$DOWNLOAD_CACHE/$SYSTEM" -d "$RA_SYSTEM_DIR"
+done
 
-#config
-#TODO download
-ln -s $CURRENT_ABSOLUTE_DIR/symlinks/config $RA_CONFIG_DIR/config
+#cores
+for CORE in "${RA_CORES[@]}"; do
+  unzip -q -o "$DOWNLOAD_CACHE/$CORE.so.zip" -d "$RA_CORES_DIR"
+done
 
-#system, bios etc.
-#TODO download
-ln -s $CURRENT_ABSOLUTE_DIR/symlinks/system $RA_CONFIG_DIR/system
