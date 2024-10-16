@@ -1,20 +1,20 @@
+*
+!.gitignore
+!package.json
+!package-lock.json
+!.prettierignore
+!.prettierrc
 
-#roms
-!roms/lutris
+
+!vars.env
+!*.sh
+!*.yaml
+!*.desktop
+!*.xml
+!*.cfg
+!*.conf
+!*.ini
+!prod.key
+!title.key
 
 
-#common files
-download_cache
-node_modules
-*.AppImage
-*.zip
-*.iso
-*.ISO
-*.mds
-*.bin
-*.cue
-*.exe
-*.7z
-*.pdf
-*.nsp
-*.txt
