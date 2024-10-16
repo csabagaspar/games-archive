@@ -20,11 +20,9 @@ curl "$RA_SCUMMVM_DOWNLOAD_URL/$RA_SCUMMVM_FILE" --output "$DOWNLOAD_CACHE/$RA_S
 #  curl "$RA_CORES_DOWNLOAD_URL/$CORE.so.zip" --output "$RA_CORES_DIR/${CORE}.zip"
 #done
 
-
 #for entry in "$RA_CORES_DIR"/*.zip; do
 #  rm -f "$entry"
 #done
-
 
 #es-de AppImage
 curl "$ES_DE_DOWNLOAD_URL" --output "$DOWNLOAD_CACHE/$ES_DE_APP_NAME"
