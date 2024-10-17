@@ -16,18 +16,11 @@ chmod a+x $APPS_DIR/$CEMU_APP_NAME
 #cemu.sh
 cp $CURRENT_ABSOLUTE_DIR/configs/cemu.sh $APPS_DIR
 
-#~/.local/share/yuzu
-#mkdir -p $HOME/.local/share/yuzu/keys
-#cp $CURRENT_ABSOLUTE_DIR/files/*.keys $HOME/.local/share/yuzu/keys
+#~/.local/share/Cemu
+mkdir -p $HOME/.local/share/Cemu
 
-#~/.local/share/yuzu/nand/system/Contents/registered
-#mkdir -p $HOME/.local/share/yuzu/nand/system/Contents/registered
-#unzip $DOWNLOAD_CACHE/$YUZU_FIRMWARE_FILE -d $HOME/.local/share/yuzu/nand/system/Contents/registered
-
-#~/.config/yuzu
-#mkdir -p $HOME/.config/yuzu
-#mkdir -p $HOME/.config/yuzu/input
-#cp $CURRENT_ABSOLUTE_DIR/configs/qt-config.$SYSTEM.ini $HOME/.config/yuzu
-#mv $HOME/.config/yuzu/qt-config.$SYSTEM.ini $HOME/.config/yuzu/qt-config.ini
-
-#cp $CURRENT_ABSOLUTE_DIR/configs/input/steamdeck.ini $HOME/.config/yuzu/input
+#~/.config/Cemu
+mkdir -p $HOME/.config/Cemu
+mkdir -p $HOME/.config/Cemu/controllerProfiles
+cp $CURRENT_ABSOLUTE_DIR/configs/Deck-Gamepad-Gyro.xml $HOME/.config/Cemu/controllerProfiles
+cp $CURRENT_ABSOLUTE_DIR/configs/Deck.xml $HOME/.config/Cemu/controllerProfiles
