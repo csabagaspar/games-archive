@@ -11,3 +11,4 @@ rm $APPS_DIR/cemu.sh
 
 rm -rf $HOME/.local/share/Cemu
 rm -rf $HOME/.config/Cemu
+rm -rf $HOME/.cache/Cemu

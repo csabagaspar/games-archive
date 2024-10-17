@@ -18,9 +18,12 @@ cp $CURRENT_ABSOLUTE_DIR/configs/cemu.sh $APPS_DIR
 
 #~/.local/share/Cemu
 mkdir -p $HOME/.local/share/Cemu
+cp $CURRENT_ABSOLUTE_DIR/files/keys.txt $HOME/.local/share/Cemu
 
 #~/.config/Cemu
 mkdir -p $HOME/.config/Cemu
 mkdir -p $HOME/.config/Cemu/controllerProfiles
-cp $CURRENT_ABSOLUTE_DIR/configs/Deck-Gamepad-Gyro.xml $HOME/.config/Cemu/controllerProfiles
-cp $CURRENT_ABSOLUTE_DIR/configs/Deck.xml $HOME/.config/Cemu/controllerProfiles
+cp $CURRENT_ABSOLUTE_DIR/configs/controllerProfiles/*.xml $HOME/.config/Cemu/controllerProfiles
+
+#~/.cache/Cemu
+
