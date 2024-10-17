@@ -5,6 +5,9 @@
 !.prettierignore
 !.prettierrc
 
+!emulators
+!frontends
+
 !vars.env
 !*.sh
 !*.yaml
