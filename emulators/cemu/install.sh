@@ -5,12 +5,12 @@ CURRENT_ABSOLUTE_DIR=$(
   pwd -P
 )
 source $CURRENT_ABSOLUTE_DIR/../../vars.env
-DOWNLOAD_CACHE=$CURRENT_ABSOLUTE_DIR/../../download_cache
+CACHE=$CURRENT_ABSOLUTE_DIR/../../cache
 
 
 #Copy image
 mkdir -p $APPS_DIR
-cp $DOWNLOAD_CACHE/$CEMU_APP_NAME $APPS_DIR
+cp $CACHE/$CEMU_APP_NAME $APPS_DIR
 chmod a+x $APPS_DIR/$CEMU_APP_NAME
 
 #cemu.sh

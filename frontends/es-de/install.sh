@@ -5,7 +5,7 @@ CURRENT_ABSOLUTE_DIR=$(
   pwd -P
 )
 source $CURRENT_ABSOLUTE_DIR/../../vars.env
-DOWNLOAD_CACHE=$CURRENT_ABSOLUTE_DIR/../../download_cache
+CACHE=$CURRENT_ABSOLUTE_DIR/../../cache
 
 #dirs
 mkdir -p $APPS_DIR
@@ -16,7 +16,7 @@ mkdir -p $ES_DE_DIR/custom_systems
 cp $CURRENT_ABSOLUTE_DIR/configs/es-de.sh $APPS_DIR
 
 #AppImage
-cp $DOWNLOAD_CACHE/$ES_DE_APP_NAME $APPS_DIR
+cp $CACHE/$ES_DE_APP_NAME $APPS_DIR
 chmod a+x $APPS_DIR/$ES_DE_APP_NAME
 
 #es_settings.xml

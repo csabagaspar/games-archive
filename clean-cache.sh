@@ -5,20 +5,20 @@ CURRENT_ABSOLUTE_DIR=$(
   pwd -P
 )
 source $CURRENT_ABSOLUTE_DIR/vars.env
-DOWNLOAD_CACHE=$CURRENT_ABSOLUTE_DIR/download_cache
+CACHE=$CURRENT_ABSOLUTE_DIR/cache
 
 #retroarch cores
 for CORE in "${RA_CORES[@]}"; do
-  rm "$DOWNLOAD_CACHE/${CORE}.so.zip"
+  rm "$CACHE/${CORE}.so.zip"
 done
 #retroarch ScummVM.zip
-rm "$DOWNLOAD_CACHE/$RA_SCUMMVM_FILE"
+rm "$CACHE/$RA_SCUMMVM_FILE"
 
 #es-de AppImage
-rm $DOWNLOAD_CACHE/$ES_DE_APP_NAME
+rm $CACHE/$ES_DE_APP_NAME
 
 #ppsspp cheat.db
-rm $DOWNLOAD_CACHE/$PPSSPP_CHEAT_DB_NAME
+rm $CACHE/$PPSSPP_CHEAT_DB_NAME
 
 #cemu
-rm $DOWNLOAD_CACHE/$CEMU_APP_NAME
+rm $CACHE/$CEMU_APP_NAME

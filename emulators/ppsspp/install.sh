@@ -5,7 +5,7 @@ CURRENT_ABSOLUTE_DIR=$(
   pwd -P
 )
 source $CURRENT_ABSOLUTE_DIR/../../vars.env
-DOWNLOAD_CACHE=$CURRENT_ABSOLUTE_DIR/../../download_cache
+CACHE=$CURRENT_ABSOLUTE_DIR/../../cache
 
 #install
 flatpak install --user flathub org.ppsspp.PPSSPP
@@ -21,7 +21,7 @@ mkdir -p $PPSSPP_PSP_DIR/SYSTEM/
 cp $CURRENT_ABSOLUTE_DIR/configs/ppsspp.sh $APPS_DIR
 
 #cheat.db
-cp $DOWNLOAD_CACHE/$PPSSPP_CHEAT_DB_NAME $PPSSPP_PSP_DIR/Cheats
+cp $CACHE/$PPSSPP_CHEAT_DB_NAME $PPSSPP_PSP_DIR/Cheats
 
 #controls.ini
 cp $CURRENT_ABSOLUTE_DIR/configs/controls.ini $PPSSPP_PSP_DIR/SYSTEM

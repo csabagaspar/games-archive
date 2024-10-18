@@ -6,7 +6,7 @@ CURRENT_ABSOLUTE_DIR=$(
 )
 source $CURRENT_ABSOLUTE_DIR/../../vars.env
 
-DOWNLOAD_CACHE=$CURRENT_ABSOLUTE_DIR/../../download_cache
+CACHE=$CURRENT_ABSOLUTE_DIR/../../cache
 
 #install
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -37,11 +37,11 @@ mv $RA_SYSTEM_DIR/scummvm.$SYSTEM.ini $RA_SYSTEM_DIR/scummvm.ini
 
 #bios
 for SYSTEM in "${RA_SYSTEMS[@]}"; do
-  unzip -q -o "$DOWNLOAD_CACHE/$SYSTEM" -d "$RA_SYSTEM_DIR"
+  unzip -q -o "$CACHE/$SYSTEM" -d "$RA_SYSTEM_DIR"
 done
 
 #cores
 for CORE in "${RA_CORES[@]}"; do
-  unzip -q -o "$DOWNLOAD_CACHE/$CORE.so.zip" -d "$RA_CORES_DIR"
+  unzip -q -o "$CACHE/$CORE.so.zip" -d "$RA_CORES_DIR"
 done
 
