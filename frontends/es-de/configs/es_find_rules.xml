@@ -11,4 +11,15 @@
             <entry>~/apps/scummvm_custom*.sh</entry>
         </rule>
     </emulator>
+        <emulator name="CEMU">
+        <rule type="systempath">
+            <entry>cemu</entry>
+            <entry>Cemu</entry>
+        </rule>
+        <rule type="staticpath">
+            <entry>~/apps/Cemu*.AppImage</entry>
+            <entry>~/apps/Cemu*.appimage</entry>
+        </rule>
+    </emulator>
+
 </ruleList>

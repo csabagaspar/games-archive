@@ -28,12 +28,12 @@
     <window_maximized>false</window_maximized>
     <open_pad>false</open_pad>
     <pad_position>
-        <x>-1</x>
-        <y>-1</y>
+        <x>0</x>
+        <y>6</y>
     </pad_position>
     <pad_size>
-        <x>-1</x>
-        <y>-1</y>
+        <x>328</x>
+        <y>207</y>
     </pad_size>
     <pad_maximized>false</pad_maximized>
     <show_icon_column>true</show_icon_column>
@@ -81,10 +81,10 @@
             <Position>1</Position>
             <TextColor>4294967295</TextColor>
             <TextScale>100</TextScale>
-            <ControllerProfiles>true</ControllerProfiles>
+            <ControllerProfiles>false</ControllerProfiles>
             <ControllerBattery>false</ControllerBattery>
-            <ShaderCompiling>true</ShaderCompiling>
-            <FriendService>true</FriendService>
+            <ShaderCompiling>false</ShaderCompiling>
+            <FriendService>false</FriendService>
         </Notification>
     </Graphic>
     <Audio>
@@ -93,12 +93,12 @@
         <TVChannels>1</TVChannels>
         <PadChannels>1</PadChannels>
         <InputChannels>0</InputChannels>
-        <TVVolume>50</TVVolume>
-        <PadVolume>0</PadVolume>
-        <InputVolume>50</InputVolume>
-        <TVDevice></TVDevice>
-        <PadDevice></PadDevice>
-        <InputDevice></InputDevice>
+        <TVVolume>100</TVVolume>
+        <PadVolume>100</PadVolume>
+        <InputVolume>100</InputVolume>
+        <TVDevice>default</TVDevice>
+        <PadDevice>default</PadDevice>
+        <InputDevice>default</InputDevice>
     </Audio>
     <Account>
         <PersistentId>2147483649</PersistentId>
