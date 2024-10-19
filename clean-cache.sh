@@ -22,3 +22,6 @@ rm $CACHE/$PPSSPP_CHEAT_DB_NAME
 
 #cemu
 rm $CACHE/$CEMU_APP_NAME
+
+#cemu-graphicPacks
+rm $CACHE/$CEMU_GRAPHIC_PACKS_LATEST

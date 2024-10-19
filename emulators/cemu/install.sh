@@ -18,7 +18,9 @@ cp $CURRENT_ABSOLUTE_DIR/configs/cemu.sh $APPS_DIR
 
 #~/.local/share/Cemu
 mkdir -p $HOME/.local/share/Cemu
+mkdir -p $HOME/.local/share/Cemu/graphicPacks/downloadedGraphicPacks
 cp $CURRENT_ABSOLUTE_DIR/files/keys.txt $HOME/.local/share/Cemu
+unzip -q -o "$CACHE/$CEMU_GRAPHIC_PACKS_LATEST" -d "$HOME/.local/share/Cemu/graphicPacks/downloadedGraphicPacks/"
 
 #~/.config/Cemu
 mkdir -p $HOME/.config/Cemu

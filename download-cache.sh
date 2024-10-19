@@ -20,15 +20,6 @@ if [ ! -f "$CACHE/$RA_SCUMMVM_FILE" ]; then
   curl "$RA_SCUMMVM_DOWNLOAD_URL/$RA_SCUMMVM_FILE" --output "$CACHE/$RA_SCUMMVM_FILE"
 fi
 
-## download cores
-#for CORE in "${RA_CORES[@]}"; do
-#  curl "$RA_CORES_DOWNLOAD_URL/$CORE.so.zip" --output "$RA_CORES_DIR/${CORE}.zip"
-#done
-
-#for entry in "$RA_CORES_DIR"/*.zip; do
-#  rm -f "$entry"
-#done
-
 #es-de AppImage
 if [ ! -f "$CACHE/$ES_DE_APP_NAME" ]; then
   curl "$ES_DE_DOWNLOAD_URL" --output "$CACHE/$ES_DE_APP_NAME"
@@ -41,5 +32,8 @@ fi
 
 #cemu
 if [ ! -f "$CACHE/$CEMU_APP_NAME" ]; then
-  curl "$CEMU_DONWLOAD_URL" --output "$CACHE/$CEMU_APP_NAME"
+  wget -P "$CACHE" $CEMU_DONWLOAD_URL
+fi
+if [ ! -f "$CACHE/$CEMU_GRAPHIC_PACKS_LATEST" ]; then
+  wget -P "$CACHE" $CEMU_GRAPHIC_PACKS_DOWNLOAD_URL
 fi
