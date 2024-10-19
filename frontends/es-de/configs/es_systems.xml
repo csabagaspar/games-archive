@@ -119,5 +119,25 @@
         <platform>arcade</platform>
         <theme>arcade</theme>
     </system>
+    <emulator name="CEMU">
+        <rule type="systempath">
+            <entry>cemu</entry>
+            <entry>Cemu</entry>
+        </rule>
+        <rule type="staticpath">
+            <entry>~/apps/Cemu*.AppImage</entry>
+            <entry>~/Applications/Cemu*.AppImage</entry>
+            <entry>~/.local/share/applications/Cemu*.AppImage</entry>
+            <entry>~/.local/bin/Cemu*.AppImage</entry>
+            <entry>~/bin/Cemu*.AppImage</entry>
+            <entry>~/Applications/Cemu/Cemu</entry>
+            <entry>~/.local/share/applications/Cemu/Cemu</entry>
+            <entry>~/.local/bin/Cemu/Cemu</entry>
+            <entry>~/bin/Cemu/Cemu</entry>
+            <entry>/var/lib/flatpak/exports/bin/info.cemu.Cemu</entry>
+            <entry>~/.local/share/flatpak/exports/bin/info.cemu.Cemu</entry>
+        </rule>
+    </emulator>
+
 
 </systemList>
